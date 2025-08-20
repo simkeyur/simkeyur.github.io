@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyur Patel - Lead Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e2e8f0;
+        }
+        .glass-effect {
+            background: rgba(23, 23, 23, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .scroll-target {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .scroll-target.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .logo-container img {
+            filter: grayscale(100%) brightness(1.5);
+            transition: filter 0.3s ease;
+        }
+        .logo-container:hover img {
+            filter: grayscale(0%) brightness(1);
+        }
+        .timeline-logo-container img {
+            transition: transform 0.3s ease;
+        }
+        .timeline-logo-container:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 glass-effect">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter">
+                <a href="#hero" class="hover:text-sky-400 transition-colors">Keyur Patel</a>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#experience" class="hover:text-sky-400 transition-colors">Experience</a>
+                <a href="#education" class="hover:text-sky-400 transition-colors">Education</a>
+                <a href="#skills" class="hover:text-sky-400 transition-colors">Skills</a>
+                <a href="#awards" class="hover:text-sky-400 transition-colors">Awards</a>
+                <a href="#" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors">Download Resume</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#experience" class="block py-2 hover:text-sky-400 transition-colors">Experience</a>
+            <a href="#education" class="block py-2 hover:text-sky-400 transition-colors">Education</a>
+            <a href="#skills" class="block py-2 hover:text-sky-400 transition-colors">Skills</a>
+            <a href="#awards" class="block py-2 hover:text-sky-400 transition-colors">Awards</a>
+            <a href="#" class="block mt-2 bg-sky-500 hover:bg-sky-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-center">Download Resume</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-[80vh] flex flex-col justify-center items-start scroll-target">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-4">
+                Lead Software Engineer
+            </h1>
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-6 gradient-text">
+                Architecting the Future with AI.
+            </h2>
+            <p class="max-w-3xl text-slate-400 text-lg md:text-xl mb-8">
+                Over a decade of experience in custom software development, specializing in architecting and integrating SaaS products. Now focusing on leveraging Generative AI to build innovative, high-impact solutions.
+            </p>
+            <div class="flex flex-wrap gap-x-6 gap-y-4 text-slate-400">
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="phone"></i>
+                    <span>1-201-993-9569</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="mail"></i>
+                    <span>simkeyur@gmail.com</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <i data-lucide="map-pin"></i>
+                    <span>Dallas Fort-worth Area</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <h2 class="text-3xl font-bold mb-12 tracking-tight scroll-target">Experience</h2>
+            <div class="relative border-l-2 border-slate-700 ml-4">
+                <!-- T-Mobile -->
+                <div class="mb-12 scroll-target">
+                    <div class="absolute -left-5 w-10 h-10 rounded-full bg-slate-800 border-4 border-slate-900 flex items-center justify-center timeline-logo-container">
+                        <img src="https://www.vectorlogo.zone/logos/t-mobile/t-mobile-icon.svg" alt="T-Mobile Logo" class="h-5" onerror="this.onerror=null;this.src='https://placehold.co/40x40/1e293b/ffffff?text=T';">
+                    </div>
+                    <div class="ml-12 pl-4">
+                        <p class="text-sm text-slate-400">June 2020 - Present</p>
+                        <h3 class="text-xl font-bold text-sky-400">Sr. Software Engineer</h3>
+                        <p class="font-semibold text-slate-300 mb-3">T-Mobile USA</p>
+                        <ul class="list-disc list-inside text-slate-400 space-y-2">
+                            <li>Architected a Transactional Generative AI solution for HR, reducing ticket resolution time by 50%.</li>
+                            <li>Directed a team of engineers in creating integration apps, connecting 15+ HR systems for 50K+ users.</li>
+                            <li>Utilized LLMs to revolutionize HR processes, improving information retrieval accuracy.</li>
+                            <li>Mentored and onboarded multiple engineers, fostering a culture of growth and excellence.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Sogeti -->
+                <div class="mb-12 scroll-target">
+                    <div class="absolute -left-5 w-10 h-10 rounded-full bg-slate-800 border-4 border-slate-900 flex items-center justify-center timeline-logo-container">
+                         <img src="https://www.vectorlogo.zone/logos/sogeti/sogeti-icon.svg" alt="Sogeti Logo" class="h-5" onerror="this.onerror=null;this.src='https://placehold.co/40x40/1e293b/ffffff?text=S';">
+                    </div>
+                    <div class="ml-12 pl-4">
+                        <p class="text-sm text-slate-400">May 2017 - June 2020</p>
+                        <h3 class="text-xl font-bold text-sky-400">Senior Consultant</h3>
+                        <p class="font-semibold text-slate-300 mb-3">Sogeti USA (Capgemini Group)</p>
+                        <ul class="list-disc list-inside text-slate-400 space-y-2">
+                            <li>Led Blockchain development efforts and translated business requirements into software applications.</li>
+                            <li>As a consultant for Allied Pilots Association, automated log monitoring and member request systems.</li>
+                            <li>Architected and developed a hybrid app for pilot notifications, improving operational efficiency.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Perfaware -->
+                <div class="mb-12 scroll-target">
+                    <div class="absolute -left-5 w-10 h-10 rounded-full bg-slate-800 border-4 border-slate-900 flex items-center justify-center p-2 timeline-logo-container">
+                        <img src="https://logo.clearbit.com/perfaware.com" alt="Perfaware Logo" class="h-full w-full object-contain" onerror="this.onerror=null;this.src='https://placehold.co/40x40/1e293b/ffffff?text=P';">
+                    </div>
+                    <div class="ml-12 pl-4">
+                        <p class="text-sm text-slate-400">May 2015 - April 2017</p>
+                        <h3 class="text-xl font-bold text-sky-400">Software Consultant</h3>
+                        <p class="font-semibold text-slate-300 mb-3">Perfaware LLC</p>
+                        <ul class="list-disc list-inside text-slate-400 space-y-2">
+                            <li>Developed UI for the RAVE platform, a custom monitoring solution for retailers.</li>
+                            <li>Designed and developed POCs including a shipment simulator microservice and a chatbot using IBM Watson.</li>
+                            <li>As a consultant for The Home Depot, led the design of a Cassandra-based inventory availability solution.</li>
+                        </ul>
+                    </div>
+                </div>
+                 <!-- Santander -->
+                <div class="scroll-target">
+                    <div class="absolute -left-5 w-10 h-10 rounded-full bg-slate-800 border-4 border-slate-900 flex items-center justify-center timeline-logo-container">
+                         <img src="https://www.vectorlogo.zone/logos/santander/santander-icon.svg" alt="Santander Logo" class="h-5" onerror="this.onerror=null;this.src='https://placehold.co/40x40/1e293b/ffffff?text=S';">
+                    </div>
+                    <div class="ml-12 pl-4">
+                        <p class="text-sm text-slate-400">April 2014 - August 2014</p>
+                        <h3 class="text-xl font-bold text-sky-400">Software Developer Intern</h3>
+                        <p class="font-semibold text-slate-300 mb-3">Santander Consumer USA</p>
+                        <ul class="list-disc list-inside text-slate-400 space-y-2">
+                            <li>Modified existing test frameworks and wrote new unit tests using C# and .NET.</li>
+                            <li>Participated in code reviews and managed code merging/branching using SVN.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20">
+            <h2 class="text-3xl font-bold mb-12 tracking-tight scroll-target">Education</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-effect p-6 rounded-lg scroll-target">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center logo-container">
+                            <img src="https://www.vectorlogo.zone/logos/utaustin/utaustin-icon.svg" alt="UT Austin Logo" class="h-8" onerror="this.onerror=null;this.src='https://placehold.co/64x64/1e293b/ffffff?text=UT';">
+                        </div>
+                        <div>
+                            <p class="text-sm text-slate-400">Expected Jan 2026</p>
+                            <h3 class="text-lg font-bold text-sky-400">Post Graduate Degree in Generative AI</h3>
+                            <p class="font-semibold text-slate-300">The University of Texas at Austin</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-effect p-6 rounded-lg scroll-target">
+                     <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center logo-container">
+                             <img src="https://www.vectorlogo.zone/logos/utarlington/utarlington-icon.svg" alt="UT Arlington Logo" class="h-10" onerror="this.onerror=null;this.src='https://placehold.co/64x64/1e293b/ffffff?text=UTA';">
+                        </div>
+                        <div>
+                            <p class="text-sm text-slate-400">Jan 2011 - May 2015</p>
+                            <h3 class="text-lg font-bold text-sky-400">Bachelor of Science in Software Engineering</h3>
+                            <p class="font-semibold text-slate-300">The University of Texas at Arlington</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <h2 class="text-3xl font-bold mb-12 tracking-tight scroll-target">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                
+                <!-- Skill Category -->
+                <div class="glass-effect p-6 rounded-lg scroll-target">
+                    <h3 class="font-bold text-lg mb-2 text-sky-400">AI & Machine Learning</h3>
+                    <ul class="text-slate-400 space-y-1">
+                        <li>Generative AI</li>
+                        <li>Large Language Models (LLMs)</li>
+                        <li>IBM Watson</li>
+                    </ul>
+                </div>
+                 <div class="glass-effect p-6 rounded-lg scroll-target">
+                    <h3 class="font-bold text-lg mb-2 text-sky-400">Languages</h3>
+                    <ul class="text-slate-400 space-y-1">
+                        <li>Java (J2EE)</li>
+                        <li>C# / .NET</li>
+                        <li>JavaScript / TypeScript</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+                <div class="glass-effect p-6 rounded-lg scroll-target">
+                    <h3 class="font-bold text-lg mb-2 text-sky-400">Web & Backend</h3>
+                    <ul class="text-slate-400 space-y-1">
+                        <li>Microservices</li>
+                        <li>API Development</li>
+                        <li>ASP.NET</li>
+                        <li>Node.js</li>
+                    </ul>
+                </div>
+                 <div class="glass-effect p-6 rounded-lg scroll-target">
+                    <h3 class="font-bold text-lg mb-2 text-sky-400">Databases</h3>
+                    <ul class="text-slate-400 space-y-1">
+                        <li>Cassandra</li>
+                        <li>MySQL</li>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+                 <div class="glass-effect p-6 rounded-lg scroll-target">
+                    <h3 class="font-bold text-lg mb-2 text-sky-400">DevOps & Tools</h3>
+                    <ul class="text-slate-400 space-y-1">
+                        <li>Docker & Kubernetes</li>
+                        <li>CI/CD Pipelines</li>
+                        <li>Git / SVN</li>
+                        <li>Agile / Scrum</li>
+                    </ul>
+                </div>
+                 <div class="glass-effect p-6 rounded-lg scroll-target">
+                    <h3 class="font-bold text-lg mb-2 text-sky-400">Cloud Platforms</h3>
+                    <ul class="text-slate-400 space-y-1">
+                        <li>Amazon Web Services (AWS)</li>
+                        <li>Microsoft Azure</li>
+                        <li>Google Cloud Platform (GCP)</li>
+                    </ul>
+                </div>
+                <div class="glass-effect p-6 rounded-lg scroll-target">
+                    <h3 class="font-bold text-lg mb-2 text-sky-400">Blockchain</h3>
+                     <ul class="text-slate-400 space-y-1">
+                        <li>Certified Blockchain Expert</li>
+                        <li>Smart Contracts</li>
+                    </ul>
+                </div>
+                 <div class="glass-effect p-6 rounded-lg scroll-target">
+                    <h3 class="font-bold text-lg mb-2 text-sky-400">Frontend</h3>
+                     <ul class="text-slate-400 space-y-1">
+                        <li>React / Next.js</li>
+                        <li>HTML / CSS</li>
+                        <li>Tailwind CSS</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Awards & Interests -->
+        <section id="awards" class="py-20">
+            <h2 class="text-3xl font-bold mb-12 tracking-tight scroll-target">Awards & Interests</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="scroll-target">
+                    <h3 class="text-xl font-bold mb-4 text-sky-400">Awards & Certifications</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center space-x-3"><i data-lucide="award" class="text-sky-400"></i><span>Microsoft Power BI DAT207X - 2019</span></li>
+                        <li class="flex items-center space-x-3"><i data-lucide="award" class="text-sky-400"></i><span>Certified Blockchain Expert™ - 2019</span></li>
+                        <li class="flex items-center space-x-3"><i data-lucide="award" class="text-sky-400"></i><span>Docker Essentials Developer by IBM - 2019</span></li>
+                        <li class="flex items-center space-x-3"><i data-lucide="trophy" class="text-amber-400"></i><span>1st Place - 2018 Sogeti Devops Hackathon</span></li>
+                        <li class="flex items-center space-x-3"><i data-lucide="trophy" class="text-amber-400"></i><span>1st Place - 2013 Nationwide AT&T Coding Challenge</span></li>
+                    </ul>
+                </div>
+                <div class="scroll-target">
+                    <h3 class="text-xl font-bold mb-4 text-sky-400">Interests</h3>
+                    <p class="text-slate-400">
+                        Apart from being a consultant, I enjoy most of my time being outdoors. During the summer here in Texas, I enjoy gardening in my backyard. Being a vegetarian since birth, I enjoy planting & harvesting my own food. When forced indoors, I follow a number of different sports, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the technical world.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="border-t border-slate-800">
+        <div class="container mx-auto px-6 py-8 text-center text-slate-500">
+            <p>&copy; 2024 Keyur Patel. Designed with passion.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Scroll animations
+        const scrollTargets = document.querySelectorAll('.scroll-target');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Optional: unobserve after animation to improve performance
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            rootMargin: '0px',
+            threshold: 0.1
+        });
+
+        scrollTargets.forEach(target => {
+            observer.observe(target);
+        });
+
+    </script>
+</body>
+</html>

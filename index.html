@@ -14,6 +14,7 @@
             font-family: 'Inter', sans-serif;
             background-color: #0a0a0a;
             color: #e2e8f0;
+            position: relative; /* Added for background positioning */
         }
         .glass-effect {
             background: rgba(23, 23, 23, 0.6);
@@ -41,9 +42,40 @@
         .timeline-logo-container:hover img {
             transform: scale(1.1);
         }
+        
+        /* --- New Techie Styles --- */
+        .bg-grid {
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: pan 60s linear infinite;
+        }
+
+        @keyframes pan {
+            0% { background-position: 0 0; }
+            100% { background-position: 480px 480px; }
+        }
+
+        .cursor {
+            display: inline-block;
+            background-color: #a78bfa;
+            margin-left: 0.1rem;
+            width: 4px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        /* --- End New Techie Styles --- */
     </style>
 </head>
 <body class="antialiased">
+
+    <!-- Animated Background -->
+    <div class="absolute top-0 left-0 w-full h-full bg-grid -z-10"></div>
 
     <!-- Header & Navigation -->
     <header class="sticky top-0 z-50 glass-effect">
@@ -72,18 +104,18 @@
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-12 md:py-20">
+    <main class="container mx-auto px-6 py-12 md:py-20 relative z-10">
 
         <!-- Hero Section -->
         <section id="hero" class="min-h-[80vh] flex flex-col justify-center items-start scroll-target">
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-4">
                 Software Engineer
             </h1>
-            <h2 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter mb-6 gradient-text">
-                Building the Future with AI.
+            <h2 class="text-2xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-6 h-16 md:h-12">
+                <span class="gradient-text" id="typing-effect"></span><span class="cursor">|</span>
             </h2>
             <p class="max-w-3xl text-slate-400 text-lg md:text-xl mb-8">
-                Over a decade of experience in custom software development, specializing in architecting and integrating SaaS products. Now focusing on leveraging Generative AI to build innovative, high-impact solutions.
+                Over a decade of experience architecting and integrating scalable SaaS products. Now pioneering the use of Generative AI to build innovative, high-impact enterprise solutions.
             </p>
             <div class="flex flex-wrap gap-x-6 gap-y-4 text-slate-400">
                 <div class="flex items-center space-x-2">
@@ -306,7 +338,7 @@
     </main>
     
     <!-- Footer -->
-    <footer class="border-t border-slate-800">
+    <footer class="border-t border-slate-800 relative z-10">
         <div class="container mx-auto px-6 py-8 text-center text-slate-500">
             <p>&copy; 2025 Keyur Patel. Designed with AI.</p>
         </div>
@@ -343,6 +375,46 @@
             observer.observe(target);
         });
 
+        // --- New Typing Effect Script ---
+        const typingText = document.getElementById('typing-effect');
+        if (typingText) {
+            const phrases = [
+                "Building Intelligent Systems.",
+                "Leveraging Generative AI.",
+                "Solving Complex Problems with Code.",
+                "Building Scalable SaaS Solutions."
+            ];
+            let phraseIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function type() {
+                const currentPhrase = phrases[phraseIndex];
+                let typeSpeed = isDeleting ? 50 : 120;
+
+                if (isDeleting) {
+                    // Deleting
+                    typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+                    charIndex--;
+                    if (charIndex === 0) {
+                        isDeleting = false;
+                        phraseIndex = (phraseIndex + 1) % phrases.length;
+                    }
+                } else {
+                    // Typing
+                    typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+                    charIndex++;
+                    if (charIndex === currentPhrase.length) {
+                        isDeleting = true;
+                        typeSpeed = 2000; // Pause at end of phrase
+                    }
+                }
+                
+                setTimeout(type, typeSpeed);
+            }
+            // Start the animation after a short delay
+            setTimeout(type, 250);
+        }
     </script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+Website: careervector.web.app
+Designed and built a comprehensive AI-driven career development platform that moves beyond simple resume generation to offer strategic career management. Leveraging Gemma-27B-IT and Retrieval-Augmented Generation (RAG), CareerVector acts as an intelligent agent that aligns a user’s entire professional history with their target roles.
+
+Key Features:
+
+The Vault (Master Profile): A centralized, vector-embedded source of truth for all career data (experience, skills, education) that persists across applications.
+Match Engine (RAG): Uses semantic vector search to analyze job descriptions and generate hyper-tailored, ATS-optimized resumes by retrieving the most relevant experience chunks from the Vault.
+Gap Engine (Strategic Analysis): Performs deep-dive gap analysis between a user's profile and target roles, identifying specific skill deficiencies and readiness scores.
+AI Learning Agent: Integrates live web search (via Gemini Pro) to automatically curate and recommend active upskilling courses from Coursera, Udemy, and top universities that directly bridge identified skill gaps.
+Admin & Analytics: Built a secured admin dashboard to monitor user quotas, match history, and performance metrics.
+Tech Stack:
+
+Core: React, Vite, Tailwind CSS
+AI/ML: Google Gemini API (2.5 Pro & Gemma), Gemini Embeddings (gemini-embedding-001), LangChain
+Backend: Firebase (Firestore, Auth, Hosting, Functions)
+Architecture: Serverless RAG Pipeline, Vector Database
+
+
+Website: eventnexus.web.app
+
+EventNexus is a modern, modular event management system designed to help organizers plan, run, and optimize events efficiently. The platform streamlines core workflows such as event creation, attendee registration and check-in, scheduling, and organizer operations through a clean administrative dashboard and well-documented APIs. Built to be production-ready and extensible, EventNexus supports seamless customization and integration for conferences, meetups, workshops, and hybrid events. The system is enhanced with AI-driven capabilities that enable smarter decision-making and improved attendee experiences. These features leverage historical data, real-time signals, and automation to reduce manual effort while increasing operational effectiveness.
+
+Key AI capabilities include:
+
+- Intelligent scheduling and session recommendations based on past attendance patterns and attendee interests
+- Predictive attendance and capacity forecasting to improve resource allocation and venue planning
+- Automated attendee segmentation with personalized communications, including emails and reminders
+- An AI assistant for rapid content generation, such as event descriptions, social media posts, and email drafts
+- Real-time analytics with anomaly detection and sentiment analysis to support post-event insights and optimization
+
+EventNexus is designed to integrate easily with external services such as calendars, email platforms, and analytics tools, enabling teams to extend functionality as needed.
+
+Explore the codebase and contribute at:
+https://github.com/simkeyur/eventnexus-systemEventNexus is a modern, modular event management system designed to help organizers plan, run, and optimize events efficiently. The platform streamlines core workflows such as event creation, attendee registration and check-in, scheduling, and organizer operations through a clean administrative dashboard and well-documented APIs. Built to be production-ready and extensible, EventNexus supports seamless customization and integration for conferences, meetups, workshops, and hybrid events. The system is enhanced with AI-driven capabilities that enable smarter decision-making and improved attendee experiences. These features leverage historical data, real-time signals, and automation to reduce manual effort while increasing operational effectiveness. Key AI capabilities include: - Intelligent scheduling and session recommendations based on past attendance patterns and attendee interests - Predictive attendance and capacity forecasting to improve resource allocation and venue planning - Automated attendee segmentation with personalized communications, including emails and reminders - An AI assistant for rapid content generation, such as event descriptions, social media posts, and email drafts - Real-time analytics with anomaly detection and sentiment analysis to support post-event insights and optimization EventNexus is designed to integrate easily with external services such as calendars, email platforms, and analytics tools, enabling teams to extend functionality as needed. Explore the codebase and contribute at: https://github.com/simkeyur/eventnexus-system

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,71 +8,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
-            color: #e2e8f0;
-            position: relative; /* Added for background positioning */
-        }
-        .glass-effect {
-            background: rgba(23, 23, 23, 0.6);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .scroll-target {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .scroll-target.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .gradient-text {
-            background: linear-gradient(to right, #38bdf8, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .timeline-logo-container img {
-            transition: transform 0.3s ease;
-        }
-        .timeline-logo-container:hover img {
-            transform: scale(1.1);
-        }
-        
-        /* --- New Techie Styles --- */
-        .bg-grid {
-            background-image:
-                linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-            background-size: 40px 40px;
-            animation: pan 60s linear infinite;
-        }
-
-        @keyframes pan {
-            0% { background-position: 0 0; }
-            100% { background-position: 480px 480px; }
-        }
-
-        .cursor {
-            display: inline-block;
-            background-color: #a78bfa;
-            margin-left: 0.1rem;
-            width: 4px;
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-        /* --- End New Techie Styles --- */
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="antialiased">
 
     <!-- Animated Background -->
@@ -85,9 +27,12 @@
             </div>
             <div class="hidden md:flex space-x-8 items-center">
                 <a href="#experience" class="hover:text-sky-400 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
                 <a href="#education" class="hover:text-sky-400 transition-colors">Education</a>
                 <a href="#skills" class="hover:text-sky-400 transition-colors">Skills</a>
-                <a href="keyur_resume_2025.pdf" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors">Download Resume</a>
+                <a href="keyur_resume_2025.pdf" target="_blank"
+                    class="bg-sky-500 hover:bg-sky-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors">Download
+                    Resume</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden">
                 <i data-lucide="menu"></i>
@@ -96,9 +41,12 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
             <a href="#experience" class="block py-2 hover:text-sky-400 transition-colors">Experience</a>
+            <a href="#projects" class="block py-2 hover:text-sky-400 transition-colors">Projects</a>
             <a href="#education" class="block py-2 hover:text-sky-400 transition-colors">Education</a>
             <a href="#skills" class="block py-2 hover:text-sky-400 transition-colors">Skills</a>
-            <a href="keyur_resume_2025.pdf" target="_blank" class="block mt-2 bg-sky-500 hover:bg-sky-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-center">Download Resume</a>
+            <a href="keyur_resume_2025.pdf" target="_blank"
+                class="block mt-2 bg-sky-500 hover:bg-sky-600 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-center">Download
+                Resume</a>
         </div>
     </header>
 
@@ -113,7 +61,8 @@
                 <span class="gradient-text" id="typing-effect"></span><span class="cursor">|</span>
             </h2>
             <p class="max-w-3xl text-slate-400 text-lg md:text-xl mb-8">
-                Over a decade of experience architecting and integrating scalable SaaS products. Now pioneering the use of Generative AI to build innovative, high-impact enterprise solutions.
+                Over a decade of experience in software engineering, now specialized in building Enterprise AI Agent
+                systems. Working with Google ADK, MCP & A2A Protocols for agent orchestration at T-Mobile.
             </p>
             <div class="flex flex-wrap gap-x-6 gap-y-4 text-slate-400">
                 <div class="flex items-center space-x-2">
@@ -137,41 +86,53 @@
             <div class="relative border-l-2 border-slate-700 ml-4">
                 <!-- T-Mobile -->
                 <div class="mb-12 scroll-target">
-                    <div class="absolute -left-5 w-10 h-10 rounded-lg bg-slate-800 border-4 border-slate-900 flex items-center justify-center p-2 timeline-logo-container">
-                        <img src="https://logo.clearbit.com/t-mobile.com" alt="T-Mobile Logo" class="h-full w-full object-contain" onerror="this.onerror=null;this.src='https://placehold.co/40x40/1e293b/ffffff?text=T';">
+                    <div
+                        class="absolute -left-8 w-16 h-16 rounded-lg bg-slate-800 border-4 border-slate-900 flex items-center justify-center timeline-logo-container overflow-hidden">
+                        <img src="images/logos/t-mobile.png" alt="T-Mobile Logo" class="h-full w-full object-cover">
                     </div>
                     <div class="ml-12 pl-4">
                         <p class="text-sm text-slate-400">June 2020 - Present</p>
-                        <h3 class="text-xl font-bold text-sky-400">Sr. Software Engineer</h3>
+                        <h3 class="text-xl font-bold text-sky-400">Sr Software Engineer (Agentic AI)</h3>
                         <p class="font-semibold text-slate-300 mb-3">T-Mobile USA</p>
                         <ul class="list-disc list-inside text-slate-400 space-y-2">
-                            <li>Architected a Transactional Generative AI solution for HR, reducing ticket resolution time by 50%.</li>
-                            <li>Directed a team of engineers in creating integration apps, connecting 15+ HR systems for 50K+ users.</li>
-                            <li>Utilized LLMs to revolutionize HR processes, improving information retrieval accuracy.</li>
-                            <li>Mentored and onboarded multiple engineers, fostering a culture of growth and excellence.</li>
+                            <li>Building Enterprise AI Agent systems using Google ADK for agent orchestration and
+                                multi-agent workflows.</li>
+                            <li>Implementing MCP (Model Context Protocol) and A2A (Agent-to-Agent) Protocols for
+                                seamless agent communication.</li>
+                            <li>Developing AI agents with Python, LangChain, and AWS Strands for complex enterprise
+                                automation.</li>
+                            <li>Architected Transactional GenAI solutions for HR, reducing ticket resolution time by
+                                50%.</li>
+                            <li>Directed integration of 15+ HR systems serving 50K+ users with intelligent agent-based
+                                workflows.</li>
                         </ul>
                     </div>
                 </div>
                 <!-- Sogeti -->
                 <div class="mb-12 scroll-target">
-                    <div class="absolute -left-5 w-10 h-10 rounded-lg bg-slate-800 border-4 border-slate-900 flex items-center justify-center p-2 timeline-logo-container">
-                         <img src="https://logo.clearbit.com/sogeti.com" alt="Sogeti Logo" class="h-full w-full object-contain" onerror="this.onerror=null;this.src='https://placehold.co/40x40/1e293b/ffffff?text=S';">
+                    <div
+                        class="absolute -left-8 w-16 h-16 rounded-lg bg-slate-800 border-4 border-slate-900 flex items-center justify-center timeline-logo-container overflow-hidden">
+                        <img src="images/logos/capgemini.jpeg" alt="Capgemini Logo" class="h-full w-full object-cover">
                     </div>
                     <div class="ml-12 pl-4">
                         <p class="text-sm text-slate-400">May 2017 - June 2020</p>
                         <h3 class="text-xl font-bold text-sky-400">Senior Consultant</h3>
-                        <p class="font-semibold text-slate-300 mb-3">Sogeti USA (Capgemini Group)</p>
+                        <p class="font-semibold text-slate-300 mb-3">Capgemini</p>
                         <ul class="list-disc list-inside text-slate-400 space-y-2">
-                            <li>Led Blockchain development efforts and translated business requirements into software applications.</li>
-                            <li>As a consultant for Allied Pilots Association, automated log monitoring and member request systems.</li>
-                            <li>Architected and developed a hybrid app for pilot notifications, improving operational efficiency.</li>
+                            <li>Led Blockchain development efforts and translated business requirements into software
+                                applications.</li>
+                            <li>As a consultant for Allied Pilots Association, automated log monitoring and member
+                                request systems.</li>
+                            <li>Architected and developed a hybrid app for pilot notifications, improving operational
+                                efficiency.</li>
                         </ul>
                     </div>
                 </div>
                 <!-- Perfaware -->
                 <div class="mb-12 scroll-target">
-                    <div class="absolute -left-5 w-10 h-10 rounded-lg bg-slate-800 border-4 border-slate-900 flex items-center justify-center p-2 timeline-logo-container">
-                        <img src="https://logo.clearbit.com/perfaware.com" alt="Perfaware Logo" class="h-full w-full object-contain" onerror="this.onerror=null;this.src='https://placehold.co/40x40/1e293b/ffffff?text=P';">
+                    <div
+                        class="absolute -left-8 w-16 h-16 rounded-lg bg-slate-800 border-4 border-slate-900 flex items-center justify-center timeline-logo-container overflow-hidden">
+                        <img src="images/logos/perfaware.png" alt="Perfaware Logo" class="h-full w-full object-cover">
                     </div>
                     <div class="ml-12 pl-4">
                         <p class="text-sm text-slate-400">May 2015 - April 2017</p>
@@ -179,15 +140,18 @@
                         <p class="font-semibold text-slate-300 mb-3">Perfaware LLC</p>
                         <ul class="list-disc list-inside text-slate-400 space-y-2">
                             <li>Developed UI for the RAVE platform, a custom monitoring solution for retailers.</li>
-                            <li>Designed and developed POCs including a shipment simulator microservice and a chatbot using IBM Watson.</li>
-                            <li>As a consultant for The Home Depot, led the design of a Cassandra-based inventory availability solution.</li>
+                            <li>Designed and developed POCs including a shipment simulator microservice and a chatbot
+                                using IBM Watson.</li>
+                            <li>As a consultant for The Home Depot, led the design of a Cassandra-based inventory
+                                availability solution.</li>
                         </ul>
                     </div>
                 </div>
-                 <!-- Santander -->
+                <!-- Santander -->
                 <div class="scroll-target">
-                    <div class="absolute -left-5 w-10 h-10 rounded-lg bg-slate-800 border-4 border-slate-900 flex items-center justify-center p-2 timeline-logo-container">
-                         <img src="https://logo.clearbit.com/santander.com" alt="Santander Logo" class="h-full w-full object-contain" onerror="this.onerror=null;this.src='https://placehold.co/40x40/1e293b/ffffff?text=S';">
+                    <div
+                        class="absolute -left-8 w-16 h-16 rounded-lg bg-slate-800 border-4 border-slate-900 flex items-center justify-center timeline-logo-container overflow-hidden">
+                        <img src="images/logos/santander.jpg" alt="Santander Logo" class="h-full w-full object-cover">
                     </div>
                     <div class="ml-12 pl-4">
                         <p class="text-sm text-slate-400">April 2014 - August 2014</p>
@@ -202,26 +166,151 @@
             </div>
         </section>
 
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="text-3xl font-bold mb-12 tracking-tight scroll-target">Recent Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- CareerVector -->
+                <div class="glass-effect rounded-lg overflow-hidden scroll-target project-card">
+                    <div
+                        class="h-48 bg-gradient-to-br from-sky-500/20 to-violet-500/20 flex items-center justify-center overflow-hidden">
+                        <div class="text-center">
+                            <i data-lucide="briefcase" class="w-16 h-16 text-sky-400 mx-auto mb-2"></i>
+                            <span class="text-2xl font-bold gradient-text">CareerVector</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-sky-400">CareerVector</h3>
+                            <a href="https://careervector.web.app" target="_blank"
+                                class="flex items-center space-x-1 text-slate-400 hover:text-sky-400 transition-colors">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                <span class="text-sm">Live Demo</span>
+                            </a>
+                        </div>
+                        <p class="text-slate-400 mb-4">
+                            Intelligent career development platform that aligns professional history with target roles
+                            using advanced AI. Features automated resume tailoring, strategic skill gap analysis, and
+                            personalized upskilling recommendations.
+                        </p>
+                        <div class="mb-4">
+                            <h4 class="text-sm font-semibold text-slate-300 mb-2">Key Features:</h4>
+                            <ul class="text-slate-400 text-sm space-y-1">
+                                <li class="flex items-center space-x-2">
+                                    <i data-lucide="database" class="w-3 h-3 text-sky-400"></i>
+                                    <span>The Vault - Centralized vector-embedded career profile</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i data-lucide="search" class="w-3 h-3 text-sky-400"></i>
+                                    <span>Match Engine - RAG-powered ATS-optimized resume generation</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i data-lucide="trending-up" class="w-3 h-3 text-sky-400"></i>
+                                    <span>Gap Engine - Strategic skill deficiency analysis</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i data-lucide="graduation-cap" class="w-3 h-3 text-sky-400"></i>
+                                    <span>AI Learning Agent - Curated upskilling recommendations</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 text-xs rounded-full bg-sky-500/20 text-sky-400">React</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-sky-500/20 text-sky-400">Gemini API</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-sky-500/20 text-sky-400">LangChain</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-sky-500/20 text-sky-400">Firebase</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-sky-500/20 text-sky-400">RAG Pipeline</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EventNexus -->
+                <div class="glass-effect rounded-lg overflow-hidden scroll-target project-card">
+                    <div
+                        class="h-48 bg-gradient-to-br from-violet-500/20 to-pink-500/20 flex items-center justify-center overflow-hidden">
+                        <div class="text-center">
+                            <i data-lucide="calendar" class="w-16 h-16 text-violet-400 mx-auto mb-2"></i>
+                            <span class="text-2xl font-bold gradient-text">EventNexus</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-sky-400">EventNexus</h3>
+                            <div class="flex items-center space-x-3">
+                                <a href="https://eventnexus.web.app" target="_blank"
+                                    class="flex items-center space-x-1 text-slate-400 hover:text-sky-400 transition-colors">
+                                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                                    <span class="text-sm">Live Demo</span>
+                                </a>
+                                <a href="https://github.com/simkeyur/eventnexus-system" target="_blank"
+                                    class="flex items-center space-x-1 text-slate-400 hover:text-sky-400 transition-colors">
+                                    <i data-lucide="github" class="w-4 h-4"></i>
+                                    <span class="text-sm">GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="text-slate-400 mb-4">
+                            Comprehensive event intelligence platform that optimizes the entire event lifecycle.
+                            Utilizes advanced analytics to automate scheduling, forecast attendance, and deliver
+                            personalized attendee experiences.
+                        </p>
+                        <div class="mb-4">
+                            <h4 class="text-sm font-semibold text-slate-300 mb-2">AI Capabilities:</h4>
+                            <ul class="text-slate-400 text-sm space-y-1">
+                                <li class="flex items-center space-x-2">
+                                    <i data-lucide="brain" class="w-3 h-3 text-violet-400"></i>
+                                    <span>Intelligent scheduling & session recommendations</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i data-lucide="line-chart" class="w-3 h-3 text-violet-400"></i>
+                                    <span>Predictive attendance & capacity forecasting</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i data-lucide="users" class="w-3 h-3 text-violet-400"></i>
+                                    <span>Automated attendee segmentation</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <i data-lucide="bar-chart-2" class="w-3 h-3 text-violet-400"></i>
+                                    <span>Real-time analytics with anomaly detection</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 text-xs rounded-full bg-violet-500/20 text-violet-400">AI/ML</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-violet-500/20 text-violet-400">Event
+                                Management</span>
+                            <span
+                                class="px-2 py-1 text-xs rounded-full bg-violet-500/20 text-violet-400">Analytics</span>
+                            <span class="px-2 py-1 text-xs rounded-full bg-violet-500/20 text-violet-400">REST
+                                APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Education Section -->
         <section id="education" class="py-20">
             <h2 class="text-3xl font-bold mb-12 tracking-tight scroll-target">Education</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="glass-effect p-6 rounded-lg scroll-target">
                     <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 w-16 h-16 p-3 rounded-lg bg-slate-800 flex items-center justify-center">
-                            <img src="https://logo.clearbit.com/utexas.edu" alt="UT Austin Logo" class="h-full w-full object-contain" onerror="this.onerror=null;this.src='https://placehold.co/64x64/1e293b/ffffff?text=UT';">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 rounded-lg bg-slate-800 flex items-center justify-center overflow-hidden">
+                            <img src="images/logos/utexas.jpg" alt="UT Austin Logo" class="h-full w-full object-cover">
                         </div>
                         <div>
-                            <p class="text-sm text-slate-400">Expected Jan 2026</p>
+                            <p class="text-sm text-slate-400">July 2024 - Jan 2026</p>
                             <h3 class="text-lg font-bold text-sky-400">Post Graduate Degree in Generative AI</h3>
                             <p class="font-semibold text-slate-300">The University of Texas at Austin</p>
                         </div>
                     </div>
                 </div>
                 <div class="glass-effect p-6 rounded-lg scroll-target">
-                     <div class="flex items-start space-x-4">
-                        <div class="flex-shrink-0 w-16 h-16 p-3 rounded-lg bg-slate-800 flex items-center justify-center">
-                             <img src="https://logo.clearbit.com/uta.edu" alt="UT Arlington Logo" class="h-full w-full object-contain" onerror="this.onerror=null;this.src='https://placehold.co/64x64/1e293b/ffffff?text=UTA';">
+                    <div class="flex items-start space-x-4">
+                        <div
+                            class="flex-shrink-0 w-16 h-16 rounded-lg bg-slate-800 flex items-center justify-center overflow-hidden">
+                            <img src="images/logos/uta.png" alt="UT Arlington Logo" class="h-full w-full object-cover">
                         </div>
                         <div>
                             <p class="text-sm text-slate-400">Jan 2011 - May 2015</p>
@@ -237,23 +326,34 @@
         <section id="skills" class="py-20">
             <h2 class="text-3xl font-bold mb-12 tracking-tight scroll-target">Technical Skills</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                
-                <!-- Skill Category -->
+
+                <!-- AI Agent Development -->
+                <div class="glass-effect p-6 rounded-lg scroll-target">
+                    <h3 class="font-bold text-lg mb-2 text-sky-400">AI Agent Development</h3>
+                    <ul class="text-slate-400 space-y-1">
+                        <li>Google ADK (Agent Development Kit)</li>
+                        <li>MCP (Model Context Protocol)</li>
+                        <li>A2A (Agent-to-Agent) Protocol</li>
+                        <li>LangChain & LangGraph</li>
+                        <li>AWS Strands</li>
+                    </ul>
+                </div>
                 <div class="glass-effect p-6 rounded-lg scroll-target">
                     <h3 class="font-bold text-lg mb-2 text-sky-400">AI & Machine Learning</h3>
                     <ul class="text-slate-400 space-y-1">
                         <li>Generative AI</li>
                         <li>Large Language Models (LLMs)</li>
-                        <li>Glean Agents</li>
+                        <li>Agent Orchestration</li>
+                        <li>RAG Pipelines</li>
                     </ul>
                 </div>
-                 <div class="glass-effect p-6 rounded-lg scroll-target">
+                <div class="glass-effect p-6 rounded-lg scroll-target">
                     <h3 class="font-bold text-lg mb-2 text-sky-400">Languages</h3>
                     <ul class="text-slate-400 space-y-1">
-                        <li>Java </li>
-                        <li>C# / .NET</li>
+                        <li>Python (Primary)</li>
                         <li>JavaScript / TypeScript</li>
-                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C# / .NET</li>
                     </ul>
                 </div>
                 <div class="glass-effect p-6 rounded-lg scroll-target">
@@ -265,7 +365,7 @@
                         <li>Node.js</li>
                     </ul>
                 </div>
-                 <div class="glass-effect p-6 rounded-lg scroll-target">
+                <div class="glass-effect p-6 rounded-lg scroll-target">
                     <h3 class="font-bold text-lg mb-2 text-sky-400">Databases</h3>
                     <ul class="text-slate-400 space-y-1">
                         <li>Cassandra</li>
@@ -274,7 +374,7 @@
                         <li>MongoDB</li>
                     </ul>
                 </div>
-                 <div class="glass-effect p-6 rounded-lg scroll-target">
+                <div class="glass-effect p-6 rounded-lg scroll-target">
                     <h3 class="font-bold text-lg mb-2 text-sky-400">DevOps & Tools</h3>
                     <ul class="text-slate-400 space-y-1">
                         <li>Docker & Kubernetes</li>
@@ -283,7 +383,7 @@
                         <li>Agile / Scrum</li>
                     </ul>
                 </div>
-                 <div class="glass-effect p-6 rounded-lg scroll-target">
+                <div class="glass-effect p-6 rounded-lg scroll-target">
                     <h3 class="font-bold text-lg mb-2 text-sky-400">Cloud Platforms</h3>
                     <ul class="text-slate-400 space-y-1">
                         <li>Amazon Web Services (AWS)</li>
@@ -293,14 +393,14 @@
                 </div>
                 <div class="glass-effect p-6 rounded-lg scroll-target">
                     <h3 class="font-bold text-lg mb-2 text-sky-400">Blockchain</h3>
-                     <ul class="text-slate-400 space-y-1">
+                    <ul class="text-slate-400 space-y-1">
                         <li>Certified Blockchain Expert</li>
                         <li>Smart Contracts</li>
                     </ul>
                 </div>
-                 <div class="glass-effect p-6 rounded-lg scroll-target">
+                <div class="glass-effect p-6 rounded-lg scroll-target">
                     <h3 class="font-bold text-lg mb-2 text-sky-400">Frontend</h3>
-                     <ul class="text-slate-400 space-y-1">
+                    <ul class="text-slate-400 space-y-1">
                         <li>Angular / Next.js</li>
                         <li>HTML / CSS</li>
                         <li>Tailwind CSS</li>
@@ -317,24 +417,34 @@
                 <div class="scroll-target">
                     <h3 class="text-xl font-bold mb-4 text-sky-400">Awards & Certifications</h3>
                     <ul class="space-y-3">
-                        <li class="flex items-center space-x-3"><i data-lucide="award" class="text-sky-400"></i><span>AiSera AI Workflows (Intermidiate) - 2024</span></li>
-                        <li class="flex items-center space-x-3"><i data-lucide="award" class="text-sky-400"></i><span>Microsoft Power BI DAT207X - 2019</span></li>
-                        <li class="flex items-center space-x-3"><i data-lucide="award" class="text-sky-400"></i><span>Certified Blockchain Expert™ - 2019</span></li>
-                        <li class="flex items-center space-x-3"><i data-lucide="trophy" class="text-amber-400"></i><span>1st Place - 2018 Sogeti Devops Hackathon</span></li>
-                        <li class="flex items-center space-x-3"><i data-lucide="trophy" class="text-amber-400"></i><span>1st Place - 2013 Nationwide AT&T Coding Challenge</span></li>
+                        <li class="flex items-center space-x-3"><i data-lucide="award"
+                                class="text-sky-400"></i><span>AiSera AI Workflows (Intermidiate) - 2024</span></li>
+                        <li class="flex items-center space-x-3"><i data-lucide="award"
+                                class="text-sky-400"></i><span>Microsoft Power BI DAT207X - 2019</span></li>
+                        <li class="flex items-center space-x-3"><i data-lucide="award"
+                                class="text-sky-400"></i><span>Certified Blockchain Expert™ - 2019</span></li>
+                        <li class="flex items-center space-x-3"><i data-lucide="trophy"
+                                class="text-amber-400"></i><span>1st Place - 2018 Sogeti Devops Hackathon</span></li>
+                        <li class="flex items-center space-x-3"><i data-lucide="trophy"
+                                class="text-amber-400"></i><span>1st Place - 2013 Nationwide AT&T Coding
+                                Challenge</span></li>
                     </ul>
                 </div>
                 <div class="scroll-target">
                     <h3 class="text-xl font-bold mb-4 text-sky-400">Interests</h3>
                     <p class="text-slate-400">
-                        Apart from being an awesome engineer, I enjoy most of my time being outdoors. During the summer here in Texas, I enjoy gardening in my backyard. Being a vegetarian since birth, I enjoy planting & harvesting my own food. When forced indoors, I follow a number of different sports, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the technical world.
+                        Apart from being an awesome engineer, I enjoy most of my time being outdoors. During the summer
+                        here in Texas, I enjoy gardening in my backyard. Being a vegetarian since birth, I enjoy
+                        planting & harvesting my own food. When forced indoors, I follow a number of different sports, I
+                        am an aspiring chef, and I spend a large amount of my free time exploring the latest technology
+                        advancements in the technical world.
                     </p>
                 </div>
             </div>
         </section>
 
     </main>
-    
+
     <!-- Footer -->
     <footer class="border-t border-slate-800 relative z-10">
         <div class="container mx-auto px-6 py-8 text-center text-slate-500">
@@ -342,77 +452,7 @@
         </div>
     </footer>
 
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Scroll animations
-        const scrollTargets = document.querySelectorAll('.scroll-target');
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    // Optional: unobserve after animation to improve performance
-                    // observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            rootMargin: '0px',
-            threshold: 0.1
-        });
-
-        scrollTargets.forEach(target => {
-            observer.observe(target);
-        });
-
-        // --- New Typing Effect Script ---
-        const typingText = document.getElementById('typing-effect');
-        if (typingText) {
-            const phrases = [
-                "Building Intelligent Systems.",
-                "Leveraging Generative AI.",
-                "Solving Complex Problems with Code.",
-                "Building Scalable SaaS Solutions."
-            ];
-            let phraseIndex = 0;
-            let charIndex = 0;
-            let isDeleting = false;
-
-            function type() {
-                const currentPhrase = phrases[phraseIndex];
-                let typeSpeed = isDeleting ? 50 : 120;
-
-                if (isDeleting) {
-                    // Deleting
-                    typingText.textContent = currentPhrase.substring(0, charIndex - 1);
-                    charIndex--;
-                    if (charIndex === 0) {
-                        isDeleting = false;
-                        phraseIndex = (phraseIndex + 1) % phrases.length;
-                    }
-                } else {
-                    // Typing
-                    typingText.textContent = currentPhrase.substring(0, charIndex + 1);
-                    charIndex++;
-                    if (charIndex === currentPhrase.length) {
-                        isDeleting = true;
-                        typeSpeed = 2000; // Pause at end of phrase
-                    }
-                }
-                
-                setTimeout(type, typeSpeed);
-            }
-            // Start the animation after a short delay
-            setTimeout(type, 250);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
+
 </html>

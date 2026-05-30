@@ -587,36 +587,6 @@ ul {
 }
 
 /* === Skills === */
-.skills-highlight {
-    margin-bottom: 30px;
-}
-
-.skills-highlight-label {
-    display: block;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--accent);
-    margin-bottom: 12px;
-}
-
-.marquee-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.marquee-tags span {
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: #fff;
-    background: var(--accent);
-    padding: 5px 14px;
-    border-radius: 999px;
-    box-shadow: 0 2px 6px rgba(154, 111, 46, 0.25);
-}
-
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -643,6 +613,14 @@ ul {
     font-size: 0.85rem;
     color: var(--ink-soft);
     padding: 3px 0;
+}
+
+/* Highlighted "currently working with" card */
+.skill-category--current {
+    background: rgba(154, 111, 46, 0.07);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
 }
 
 /* === Awards === */

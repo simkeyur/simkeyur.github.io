@@ -1,10 +1,25 @@
 /* ===================================
-   Academic Resume — Black & White
+   Warm Resume — Paper & Ochre
    =================================== */
 
 /* Google Fonts loaded in HTML:
-   - Oswald (headings)
-   - Inter (body) */
+   - Playfair Display (headings)
+   - Lora (body) */
+
+/* === Theme Palette === */
+:root {
+    --paper: #f0e8d6;        /* page background — warm resume paper */
+    --surface: #fbf7ee;      /* cards, logo tiles, raised surfaces */
+    --ink: #2b2419;          /* primary text & headings — warm espresso */
+    --ink-soft: #4a4032;     /* body copy */
+    --muted: #6f6453;        /* secondary text */
+    --faint: #8a7f6c;        /* dates, tertiary text */
+    --accent: #9a6f2e;       /* ochre / gold-brown */
+    --accent-dark: #7d5a24;  /* hover / pressed accent */
+    --border: #e2d7bf;       /* warm tan borders */
+    --border-soft: #ece3d0;  /* faint dividers */
+    --shadow: 0 6px 24px rgba(74, 58, 35, 0.08);
+}
 
 /* === Reset & Base === */
 *,
@@ -21,23 +36,30 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #ffffff;
-    color: #222222;
+    font-family: 'Lora', Georgia, serif;
+    background-color: var(--paper);
+    /* subtle paper grain overlay */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    color: var(--ink-soft);
     line-height: 1.7;
     font-size: 15px;
     -webkit-font-smoothing: antialiased;
 }
 
+h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--ink);
+}
+
 a {
-    color: #222;
+    color: var(--accent);
     text-decoration: underline;
     text-underline-offset: 2px;
     transition: color 0.2s ease;
 }
 
 a:hover {
-    color: #555;
+    color: var(--accent-dark);
 }
 
 img {
@@ -62,8 +84,10 @@ ul {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: #333333;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    background-color: rgba(240, 232, 214, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-soft);
 }
 
 .navbar-inner {
@@ -77,17 +101,16 @@ ul {
 }
 
 .navbar-brand {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #ffffff;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--ink);
     text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .navbar-brand:hover {
-    color: #cccccc;
+    color: var(--accent);
 }
 
 .navbar-links {
@@ -97,7 +120,7 @@ ul {
 }
 
 .navbar-links a {
-    color: #cccccc;
+    color: var(--muted);
     text-decoration: none;
     font-size: 0.8rem;
     font-weight: 500;
@@ -107,7 +130,7 @@ ul {
 }
 
 .navbar-links a:hover {
-    color: #ffffff;
+    color: var(--accent);
 }
 
 .navbar-social {
@@ -116,11 +139,11 @@ ul {
     gap: 16px;
     margin-left: 24px;
     padding-left: 24px;
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid var(--border);
 }
 
 .navbar-social a {
-    color: #cccccc;
+    color: var(--muted);
     text-decoration: none;
     transition: color 0.2s ease;
     display: flex;
@@ -128,7 +151,7 @@ ul {
 }
 
 .navbar-social a:hover {
-    color: #ffffff;
+    color: var(--accent);
 }
 
 .navbar-social svg {
@@ -142,7 +165,7 @@ ul {
     display: none;
     background: none;
     border: none;
-    color: #ffffff;
+    color: var(--ink);
     font-size: 1.5rem;
     cursor: pointer;
     padding: 4px;
@@ -150,19 +173,20 @@ ul {
 
 .mobile-menu {
     display: none;
-    background-color: #333333;
+    background-color: var(--surface);
     padding: 12px 30px 20px;
+    border-bottom: 1px solid var(--border-soft);
 }
 
 .mobile-menu a {
     display: block;
-    color: #cccccc;
+    color: var(--muted);
     text-decoration: none;
     padding: 8px 0;
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--border-soft);
 }
 
 .mobile-menu a:last-child {
@@ -170,7 +194,7 @@ ul {
 }
 
 .mobile-menu a:hover {
-    color: #ffffff;
+    color: var(--accent);
 }
 
 /* === Hero / About Section === */
@@ -192,15 +216,20 @@ ul {
     height: 200px;
     border-radius: 8px;
     object-fit: cover;
-    border: 3px solid #ddd;
+    border: 3px solid var(--border);
+    box-shadow: var(--shadow);
 }
 
 .hero-bio {
     flex: 1;
     text-align: justify;
-    color: #333;
+    color: var(--ink-soft);
     font-size: 0.95rem;
     line-height: 1.8;
+}
+
+.hero-bio strong {
+    color: var(--ink);
 }
 
 .hero-links {
@@ -213,34 +242,34 @@ ul {
 }
 
 .hero-links a {
-    color: #222;
-    font-weight: 500;
+    color: var(--accent);
+    font-weight: 600;
 }
 
 .hero-links .separator {
-    color: #999;
+    color: var(--border);
     margin: 0 2px;
 }
 
 .hero-contact {
     margin-top: 6px;
-    color: #666;
+    color: var(--muted);
     font-size: 0.85rem;
 }
 
 /* === Section Styles === */
 .section {
     padding: 40px 0;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--border);
 }
 
 .section-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.6rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #111;
+    color: var(--ink);
     margin-bottom: 28px;
 }
 
@@ -258,7 +287,7 @@ ul {
     top: 0;
     bottom: 0;
     width: 2px;
-    background: #ddd;
+    background: var(--border);
 }
 
 .experience-entry {
@@ -268,7 +297,7 @@ ul {
     align-items: flex-start;
     margin-bottom: 36px;
     padding-bottom: 36px;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid var(--border-soft);
 }
 
 .experience-entry:last-child {
@@ -289,8 +318,9 @@ ul {
     height: 64px;
     border-radius: 10px;
     overflow: hidden;
-    background: #fff;
-    border: 2px solid #e0e0e0;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow);
     z-index: 1;
     display: flex;
     align-items: center;
@@ -310,29 +340,29 @@ ul {
 
 .experience-date {
     display: inline-block;
-    color: #888;
+    color: var(--accent);
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.5px;
     margin-bottom: 4px;
 }
 
 .experience-content h3 {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     font-weight: 700;
-    color: #111;
+    color: var(--ink);
     margin-bottom: 2px;
 }
 
 .experience-content .company {
     font-weight: 600;
-    color: #555;
+    color: var(--muted);
     margin-bottom: 8px;
     font-size: 0.9rem;
 }
 
 .experience-content ul {
-    color: #444;
+    color: var(--ink-soft);
     font-size: 0.88rem;
     line-height: 1.7;
     margin-top: 6px;
@@ -345,7 +375,7 @@ ul {
 .experience-content .client-section {
     margin-top: 8px;
     font-weight: 600;
-    color: #333;
+    color: var(--ink);
 }
 
 .experience-content .client-details {
@@ -361,7 +391,7 @@ ul {
 .project-entry {
     margin-bottom: 32px;
     padding-bottom: 32px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--border-soft);
 }
 
 .project-entry:last-child {
@@ -379,9 +409,9 @@ ul {
 }
 
 .project-header h3 {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    color: #111;
+    color: var(--ink);
 }
 
 .project-links {
@@ -392,22 +422,22 @@ ul {
 
 .project-links a {
     font-size: 0.8rem;
-    color: #555;
+    color: var(--accent);
     text-decoration: none;
     padding: 2px 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
     transition: all 0.2s ease;
 }
 
 .project-links a:hover {
-    background-color: #333;
-    color: #fff;
-    border-color: #333;
+    background-color: var(--accent);
+    color: var(--surface);
+    border-color: var(--accent);
 }
 
 .project-description {
-    color: #444;
+    color: var(--ink-soft);
     font-size: 0.9rem;
     line-height: 1.7;
     margin-bottom: 10px;
@@ -416,12 +446,12 @@ ul {
 .project-features h4 {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #333;
+    color: var(--ink);
     margin-bottom: 6px;
 }
 
 .project-features ul {
-    color: #555;
+    color: var(--ink-soft);
     font-size: 0.85rem;
 }
 
@@ -434,11 +464,11 @@ ul {
 
 .project-tech span {
     font-size: 0.75rem;
-    color: #555;
-    background: #f0f0f0;
+    color: var(--accent-dark);
+    background: var(--surface);
     padding: 2px 10px;
-    border-radius: 3px;
-    border: 1px solid #ddd;
+    border-radius: 999px;
+    border: 1px solid var(--border);
 }
 
 /* === Education === */
@@ -460,25 +490,27 @@ ul {
     height: 56px;
     border-radius: 6px;
     object-fit: cover;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
 }
 
 .education-info .date {
     font-size: 0.8rem;
-    color: #888;
+    color: var(--accent);
+    font-weight: 600;
 }
 
 .education-info h3 {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     font-weight: 700;
-    color: #111;
+    color: var(--ink);
     margin: 2px 0;
 }
 
 .education-info .school {
     font-size: 0.88rem;
     font-weight: 600;
-    color: #444;
+    color: var(--muted);
 }
 
 /* === Skills === */
@@ -489,14 +521,14 @@ ul {
 }
 
 .skill-category h3 {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 700;
-    color: #111;
+    color: var(--ink);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 8px;
     padding-bottom: 4px;
-    border-bottom: 2px solid #222;
+    border-bottom: 2px solid var(--accent);
 }
 
 .skill-category ul {
@@ -506,7 +538,7 @@ ul {
 
 .skill-category ul li {
     font-size: 0.85rem;
-    color: #444;
+    color: var(--ink-soft);
     padding: 3px 0;
 }
 
@@ -525,7 +557,7 @@ ul {
 .awards-list li {
     padding: 6px 0;
     font-size: 0.9rem;
-    color: #333;
+    color: var(--ink-soft);
     display: flex;
     align-items: center;
     gap: 8px;
@@ -536,17 +568,17 @@ ul {
 }
 
 .interests-text {
-    color: #444;
+    color: var(--ink-soft);
     font-size: 0.9rem;
     line-height: 1.8;
 }
 
 /* === Footer === */
 .footer {
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--border);
     padding: 24px 0;
     text-align: center;
-    color: #999;
+    color: var(--muted);
     font-size: 0.8rem;
 }
 

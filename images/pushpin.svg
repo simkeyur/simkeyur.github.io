@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 86" width="64" height="86">
+  <defs>
+    <radialGradient id="head" cx="36%" cy="30%" r="78%">
+      <stop offset="0%" stop-color="#ff9d9d"/>
+      <stop offset="42%" stop-color="#e23b3b"/>
+      <stop offset="100%" stop-color="#8f1414"/>
+    </radialGradient>
+    <linearGradient id="neck" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c93636"/>
+      <stop offset="100%" stop-color="#7c1212"/>
+    </linearGradient>
+    <linearGradient id="needle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6c6c6c"/>
+      <stop offset="35%" stop-color="#f2f2f2"/>
+      <stop offset="62%" stop-color="#b0b0b0"/>
+      <stop offset="100%" stop-color="#5e5e5e"/>
+    </linearGradient>
+  </defs>
+  <!-- contact shadow where the needle enters -->
+  <ellipse cx="33" cy="83" rx="5" ry="2" fill="#000000" opacity="0.18"/>
+  <!-- metal needle -->
+  <polygon points="29,46 35,46 33.6,83 31.4,83" fill="url(#needle)"/>
+  <!-- neck under the head -->
+  <path d="M20 39 h24 a3 3 0 0 1 3 3 v2 a15 7 0 0 1 -30 0 v-2 a3 3 0 0 1 3 -3 z" fill="url(#neck)"/>
+  <!-- domed head -->
+  <ellipse cx="32" cy="26" rx="27" ry="23" fill="url(#head)"/>
+  <!-- glossy highlight -->
+  <ellipse cx="22" cy="16" rx="8.5" ry="5.5" fill="#ffffff" opacity="0.6"/>
+</svg>

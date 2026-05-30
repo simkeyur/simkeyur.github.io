@@ -258,17 +258,6 @@ ul {
     box-shadow: 0 10px 30px rgba(74, 58, 35, 0.16);
 }
 
-/* Push-pin holding the photo */
-.photo-pin {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    font-size: 32px;
-    line-height: 1;
-    transform: translateX(-50%) rotate(8deg);
-    z-index: 3;
-    filter: drop-shadow(0 3px 3px rgba(74, 58, 35, 0.3));
-}
 
 .hero-bio {
     text-align: left;
@@ -670,11 +659,6 @@ ul {
         width: 140px;
         margin: 6px 22px 12px 0;
         transform: rotate(0deg);
-    }
-
-    .photo-pin {
-        font-size: 26px;
-        top: -16px;
     }
 
     .hero-photo {

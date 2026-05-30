@@ -38,12 +38,23 @@ html {
 body {
     font-family: 'Lora', Georgia, serif;
     background-color: var(--paper);
-    /* subtle paper grain overlay */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
     color: var(--ink-soft);
     line-height: 1.7;
     font-size: 15px;
     -webkit-font-smoothing: antialiased;
+}
+
+/* Paper grain — fixed overlay so the texture reads across the whole page */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 160px 160px;
+    opacity: 0.09;
+    mix-blend-mode: multiply;
 }
 
 h1, h2, h3 {
@@ -102,11 +113,15 @@ ul {
 
 .navbar-brand {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--ink);
     text-decoration: none;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
+    line-height: 1;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-right: 24px;
 }
 
 .navbar-brand:hover {
@@ -206,18 +221,29 @@ ul {
 
 .hero-content {
     display: flex;
-    gap: 30px;
-    align-items: flex-start;
+    gap: 40px;
+    align-items: center;
 }
 
 .hero-photo {
     flex-shrink: 0;
-    width: 200px;
-    height: 200px;
-    border-radius: 8px;
+    width: 210px;
+    height: 250px;
+    border-radius: 4px;
     object-fit: cover;
-    border: 3px solid var(--border);
-    box-shadow: var(--shadow);
+    object-position: center top;
+    /* white photo-print mat on the paper */
+    background: #fff;
+    padding: 10px;
+    padding-bottom: 32px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 30px rgba(74, 58, 35, 0.16);
+    transform: rotate(-1.2deg);
+    transition: transform 0.3s ease;
+}
+
+.hero-photo:hover {
+    transform: rotate(0deg);
 }
 
 .hero-bio {
@@ -316,11 +342,12 @@ ul {
     flex-shrink: 0;
     width: 64px;
     height: 64px;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    background: var(--surface);
-    border: 2px solid var(--border);
+    background: #ffffff;
+    border: 1px solid var(--border);
     box-shadow: var(--shadow);
+    padding: 11px;
     z-index: 1;
     display: flex;
     align-items: center;
@@ -330,7 +357,7 @@ ul {
 .timeline-logo img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .experience-body {
@@ -488,8 +515,10 @@ ul {
     flex-shrink: 0;
     width: 56px;
     height: 56px;
-    border-radius: 6px;
-    object-fit: cover;
+    border-radius: 10px;
+    object-fit: contain;
+    padding: 9px;
+    background: #ffffff;
     border: 1px solid var(--border);
     box-shadow: var(--shadow);
 }
@@ -619,9 +648,14 @@ ul {
         text-align: center;
     }
 
+    .hero-content {
+        gap: 28px;
+    }
+
     .hero-photo {
-        width: 160px;
-        height: 160px;
+        width: 180px;
+        height: 215px;
+        transform: rotate(0deg);
     }
 
     .hero-bio {

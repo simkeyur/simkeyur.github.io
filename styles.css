@@ -268,28 +268,6 @@ ul {
     margin-bottom: 14px;
 }
 
-.hero-status {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--accent-dark);
-    background: rgba(154, 111, 46, 0.1);
-    border: 1px solid var(--border);
-    padding: 4px 13px;
-    border-radius: 999px;
-    margin-bottom: 18px;
-}
-
-.hero-status .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #4a8f5b;
-    box-shadow: 0 0 0 3px rgba(74, 143, 91, 0.18);
-}
-
 .hero-bio {
     text-align: left;
     color: var(--ink-soft);

@@ -220,18 +220,23 @@ ul {
 /* hero-name removed by design */
 
 .hero-content {
-    display: flex;
-    gap: 40px;
-    align-items: center;
+    display: block;
 }
 
-/* Pinned photo frame */
+/* clear the floated photo */
+.hero-content::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* Pinned photo frame — floated so the bio wraps around it */
 .photo-frame {
     position: relative;
-    flex-shrink: 0;
-    width: 210px;
-    padding-top: 10px;
-    transform: rotate(-1.2deg);
+    float: left;
+    width: 200px;
+    margin: 8px 38px 18px 0;
+    transform: rotate(-1.5deg);
     transition: transform 0.3s ease;
 }
 
@@ -241,7 +246,7 @@ ul {
 
 .hero-photo {
     width: 100%;
-    height: 250px;
+    height: 240px;
     border-radius: 4px;
     object-fit: cover;
     object-position: center top;
@@ -256,28 +261,13 @@ ul {
 /* Push-pin holding the photo */
 .photo-pin {
     position: absolute;
-    top: -2px;
+    top: -30px;
     left: 50%;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    transform: translateX(-50%);
-    background: radial-gradient(circle at 35% 28%, #ff9b9b 0%, #e23b3b 45%, #9e1818 100%);
-    box-shadow: 0 4px 6px rgba(74, 58, 35, 0.4), inset -1px -2px 3px rgba(0, 0, 0, 0.3);
+    width: 34px;
+    height: auto;
+    transform: translateX(-50%) rotate(6deg);
     z-index: 3;
-}
-
-/* glossy highlight on the pin */
-.photo-pin::after {
-    content: '';
-    position: absolute;
-    top: 4px;
-    left: 5px;
-    width: 7px;
-    height: 5px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.85);
-    transform: rotate(-20deg);
+    filter: drop-shadow(0 4px 4px rgba(74, 58, 35, 0.35));
 }
 
 .hero-bio {
@@ -676,31 +666,23 @@ ul {
         font-size: 2rem;
     }
 
-    .hero-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero-content {
-        gap: 28px;
-    }
-
     .photo-frame {
-        width: 180px;
+        width: 140px;
+        margin: 6px 22px 12px 0;
         transform: rotate(0deg);
     }
 
+    .photo-pin {
+        width: 28px;
+        top: -24px;
+    }
+
     .hero-photo {
-        height: 215px;
+        height: 170px;
     }
 
     .hero-bio {
         text-align: left;
-    }
-
-    .hero-links {
-        justify-content: center;
     }
 
     .timeline-logo {

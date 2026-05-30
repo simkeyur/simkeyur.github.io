@@ -95,15 +95,19 @@
         <!-- About / Hero Section -->
         <section id="about" class="hero fade-in">
             <div class="hero-content">
-                <img src="images/keyurpatel.jpeg" alt="Keyur Patel" class="hero-photo"
-                    onerror="this.style.display='none'">
+                <div class="photo-frame">
+                    <span class="photo-pin" aria-hidden="true"></span>
+                    <img src="images/keyurpatel.jpeg" alt="Keyur Patel" class="hero-photo"
+                        onerror="this.style.display='none'">
+                </div>
                 <div>
                     <p class="hero-bio">
                         I am a Senior Software Engineer at <strong>T-Mobile USA</strong>, specializing in building
                         Enterprise AI Agent systems. With over a decade of experience in software engineering, I now
-                        focus on Agentic AI — working with Google ADK, MCP (Model Context Protocol) & A2A
-                        (Agent-to-Agent) Protocols for agent orchestration and multi-agent workflows. I develop AI
-                        agents with Python, LangChain, and AWS Strands for complex enterprise automation. Previously, I
+                        focus on Agentic AI — building real-time voice agents on <strong>AWS Bedrock</strong> with
+                        <strong>Amazon Nova Sonic</strong>, and orchestrating multi-agent workflows with Google ADK,
+                        AWS Strands, and the MCP (Model Context Protocol) & A2A (Agent-to-Agent) Protocols. I develop AI
+                        agents in Python with LangChain and RAG for complex enterprise automation. Previously, I
                         worked as a Senior Consultant at <strong>Sogeti (Capgemini Group)</strong>, where I led
                         Blockchain development initiatives and delivered client projects for Allied Pilots Association.
                         Earlier, I was a Software Consultant at <strong>Perfaware LLC</strong>, building monitoring
@@ -140,16 +144,17 @@
                             <h3>Sr Software Engineer (Agentic AI)</h3>
                             <p class="company">T-Mobile USA</p>
                             <ul>
-                                <li>Building Enterprise AI Agent systems using Google ADK for agent orchestration and
-                                    multi-agent workflows.</li>
+                                <li>Building real-time voice agents on <strong>AWS Bedrock</strong> with
+                                    <strong>Amazon Nova Sonic</strong> for low-latency, speech-to-speech conversational
+                                    experiences.</li>
+                                <li>Architecting enterprise multi-agent systems with Google ADK, AWS Strands, and
+                                    LangGraph for agent orchestration and stateful workflows.</li>
                                 <li>Implementing MCP (Model Context Protocol) and A2A (Agent-to-Agent) Protocols for
-                                    seamless agent communication.</li>
-                                <li>Developing AI agents with Python, LangChain, and AWS Strands for complex enterprise
-                                    automation.</li>
-                                <li>Architected Transactional GenAI solutions for HR, reducing ticket resolution time by
-                                    50%.</li>
-                                <li>Directed integration of 15+ HR systems serving 50K+ users with intelligent
-                                    agent-based workflows.</li>
+                                    interoperable tool use and cross-agent communication.</li>
+                                <li>Architected transactional GenAI solutions for HR, reducing ticket resolution time by
+                                    50% across 15+ integrated systems serving 50K+ users.</li>
+                                <li>Productionizing agents in Python with retrieval (RAG), evaluation, and guardrails for
+                                    reliable, enterprise-grade automation.</li>
                             </ul>
                         </div>
                     </div>
@@ -244,34 +249,34 @@
         <section id="projects" class="section fade-in">
             <h2 class="section-title">Recent Projects</h2>
 
-            <!-- Agent Vector -->
+            <!-- AI Agent Harness -->
             <div class="project-entry fade-in">
                 <div class="project-header">
-                    <h3>Agent Vector</h3>
+                    <h3>AI Agent Harness</h3>
                     <div class="project-links">
                         <a href="https://agentvector.web.app" target="_blank">Live Demo</a>
                     </div>
                 </div>
                 <p class="project-description">
-                    AI Agent platform for small enterprises that helps build intelligent agents for employees and
-                    enables vector search across company documents. Equipped with the latest protocols and
-                    enterprise-grade security for seamless agent deployment.
+                    A model-agnostic harness for building, evaluating, and shipping production AI agents. Standardizes
+                    tool use over MCP, routes across frontier models, and bakes in tracing, evals, and guardrails so
+                    teams can take agents from prototype to production with confidence.
                 </p>
                 <div class="project-features">
                     <h4>Key Capabilities:</h4>
                     <ul>
-                        <li>MCP (Model Context Protocol) integration for tool orchestration</li>
-                        <li>Computer Use capabilities for browser-based automation</li>
-                        <li>Vector search across company documents and knowledge bases</li>
-                        <li>Enterprise security with role-based access controls</li>
+                        <li>MCP-native tool orchestration with typed, reusable tool servers</li>
+                        <li>Multi-model routing across Claude, Amazon Nova, and Gemini</li>
+                        <li>Built-in evals, tracing, and observability for agent runs</li>
+                        <li>RAG over company knowledge with role-based access controls</li>
                     </ul>
                 </div>
                 <div class="project-tech">
                     <span>AI Agents</span>
                     <span>MCP</span>
-                    <span>Computer Use</span>
-                    <span>Vector Search</span>
-                    <span>Enterprise Security</span>
+                    <span>AWS Bedrock</span>
+                    <span>Evals &amp; Tracing</span>
+                    <span>RAG</span>
                 </div>
             </div>
 
@@ -284,25 +289,25 @@
                     </div>
                 </div>
                 <p class="project-description">
-                    Intelligent career development platform that aligns professional history with target roles using
-                    advanced AI. Features automated resume tailoring, strategic skill gap analysis, and personalized
-                    upskilling recommendations.
+                    An agentic career platform that turns your full work history into a living, vector-embedded profile,
+                    then reasons over it to tailor ATS-ready resumes, surface skill gaps against target roles, and
+                    recommend the right next move — all grounded in retrieval rather than generic generation.
                 </p>
                 <div class="project-features">
                     <h4>Key Features:</h4>
                     <ul>
-                        <li>The Vault — Centralized vector-embedded career profile</li>
-                        <li>Match Engine — RAG-powered ATS-optimized resume generation</li>
-                        <li>Gap Engine — Strategic skill deficiency analysis</li>
-                        <li>AI Learning Agent — Curated upskilling recommendations</li>
+                        <li>The Vault — centralized, vector-embedded career profile</li>
+                        <li>Match Engine — RAG-powered, ATS-optimized resume generation</li>
+                        <li>Gap Engine — role-aware skill gap and readiness analysis</li>
+                        <li>Learning Agent — live-search curated upskilling paths</li>
                     </ul>
                 </div>
                 <div class="project-tech">
                     <span>React</span>
-                    <span>Gemini API</span>
+                    <span>Gemini &amp; Gemma</span>
                     <span>LangChain</span>
                     <span>Firebase</span>
-                    <span>RAG Pipeline</span>
+                    <span>Serverless RAG</span>
                 </div>
             </div>
 
@@ -316,23 +321,23 @@
                     </div>
                 </div>
                 <p class="project-description">
-                    Comprehensive event intelligence platform that optimizes the entire event lifecycle. Utilizes
-                    advanced analytics to automate scheduling, forecast attendance, and deliver personalized attendee
-                    experiences.
+                    A modular event intelligence platform that streamlines the full lifecycle — creation, registration,
+                    check-in, and scheduling — and layers AI on top to forecast attendance, personalize communications,
+                    and generate content, turning historical and real-time signals into operational decisions.
                 </p>
                 <div class="project-features">
                     <h4>AI Capabilities:</h4>
                     <ul>
-                        <li>Intelligent scheduling & session recommendations</li>
-                        <li>Predictive attendance & capacity forecasting</li>
-                        <li>Automated attendee segmentation</li>
-                        <li>Real-time analytics with anomaly detection</li>
+                        <li>Intelligent scheduling &amp; session recommendations</li>
+                        <li>Predictive attendance &amp; capacity forecasting</li>
+                        <li>Automated attendee segmentation &amp; outreach</li>
+                        <li>Real-time analytics with anomaly &amp; sentiment detection</li>
                     </ul>
                 </div>
                 <div class="project-tech">
                     <span>AI/ML</span>
                     <span>Event Management</span>
-                    <span>Analytics</span>
+                    <span>Forecasting</span>
                     <span>REST APIs</span>
                 </div>
             </div>

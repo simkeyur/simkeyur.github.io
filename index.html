@@ -67,7 +67,7 @@
                                 d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                         </svg>
                     </a>
-                    <a href="mailto:simkeyur(at)gmail.com" title="Email">
+                    <a href="mailto:simkeyur@gmail.com" title="Email">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
@@ -100,19 +100,20 @@
                         onerror="this.style.display='none'">
                 </div>
                 <div>
+                    <p class="hero-tagline">
+                        Building enterprise AI agents — real-time voice, multi-agent orchestration, and RAG — at
+                        production scale.
+                    </p>
+
+                    <span class="hero-status"><span class="dot"></span> Open to advisory &amp; consulting</span>
+
                     <p class="hero-bio">
-                        I am a Sr. AI Engineer at <strong>T-Mobile USA</strong>, specializing in building
-                        Enterprise AI Agent systems. With over a decade of experience in software engineering, I now
-                        focus on Agentic AI — building real-time voice agents on <strong>AWS Bedrock</strong> with
-                        <strong>Amazon Nova Sonic</strong>, and orchestrating multi-agent workflows with Google ADK,
-                        AWS Strands, and the MCP (Model Context Protocol) & A2A (Agent-to-Agent) Protocols. I develop AI
-                        agents in Python with LangChain and RAG for complex enterprise automation. Previously, I
-                        worked as a Senior Consultant at <strong>Sogeti (Capgemini Group)</strong>, where I led
-                        Blockchain development initiatives and delivered client projects for Allied Pilots Association.
-                        Earlier, I was a Software Consultant at <strong>Perfaware LLC</strong>, building monitoring
-                        solutions for enterprise retailers including The Home Depot. I hold a Post Graduate Degree in
-                        Generative AI from <strong>The University of Texas at Austin</strong> and a B.S. in Software
-                        Engineering from <strong>The University of Texas at Arlington</strong>.
+                        I'm a Sr. AI Engineer at <strong>T-Mobile USA</strong> with over a decade in software
+                        engineering, now focused on Agentic AI. I build real-time voice agents on
+                        <strong>AWS Bedrock</strong> with <strong>Amazon Nova Sonic</strong> and orchestrate
+                        multi-agent workflows with Google ADK, AWS Strands, and the MCP (Model Context Protocol) &
+                        A2A (Agent-to-Agent) protocols — all in Python with LangChain and RAG. I hold a Post Graduate
+                        Degree in Generative AI from <strong>UT Austin</strong>.
                     </p>
 
                     <div class="hero-links">
@@ -122,7 +123,9 @@
                         <span class="separator">|</span>
                         <a href="https://linkedin.com/in/simkeyur" target="_blank">LinkedIn</a>
                     </div>
-                    <p class="hero-contact">Email: simkeyur(at)gmail.com &nbsp;·&nbsp; Dallas Fort-Worth Area</p>
+                    <p class="hero-contact">
+                        <a href="mailto:simkeyur@gmail.com">simkeyur@gmail.com</a> &nbsp;·&nbsp; Dallas–Fort Worth, TX
+                    </p>
                 </div>
             </div>
         </section>
@@ -372,6 +375,18 @@
         <section id="skills" class="section fade-in">
             <h2 class="section-title">Technical Skills</h2>
 
+            <div class="skills-highlight">
+                <span class="skills-highlight-label">Currently working with</span>
+                <div class="marquee-tags">
+                    <span>AWS Bedrock</span>
+                    <span>Amazon Nova Sonic</span>
+                    <span>MCP</span>
+                    <span>Google ADK</span>
+                    <span>LangGraph</span>
+                    <span>AWS Strands</span>
+                </div>
+            </div>
+
             <div class="skills-grid">
                 <div class="skill-category fade-in">
                     <h3>🤖 Agentic AI</h3>
@@ -467,6 +482,38 @@
             <p>&copy; <script>document.write(new Date().getFullYear())</script> Keyur Patel. Designed with AI.</p>
         </div>
     </footer>
+
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Keyur Patel",
+        "jobTitle": "Sr. AI Engineer",
+        "worksFor": { "@type": "Organization", "name": "T-Mobile USA" },
+        "url": "https://simkeyur.github.io/",
+        "image": "https://simkeyur.github.io/images/keyurpatel.jpeg",
+        "email": "mailto:simkeyur@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Dallas–Fort Worth",
+            "addressRegion": "TX",
+            "addressCountry": "US"
+        },
+        "alumniOf": [
+            { "@type": "CollegeOrUniversity", "name": "The University of Texas at Austin" },
+            { "@type": "CollegeOrUniversity", "name": "The University of Texas at Arlington" }
+        ],
+        "sameAs": [
+            "https://github.com/simkeyur",
+            "https://linkedin.com/in/simkeyur"
+        ],
+        "knowsAbout": [
+            "Agentic AI", "AWS Bedrock", "Amazon Nova Sonic", "Model Context Protocol",
+            "LangChain", "Retrieval-Augmented Generation", "Voice AI Agents", "Python"
+        ]
+    }
+    </script>
 
     <script src="script.js"></script>
 </body>

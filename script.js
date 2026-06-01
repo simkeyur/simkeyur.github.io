@@ -3,18 +3,21 @@ const mobileMenuButton = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
 
 if (mobileMenuButton && mobileMenu) {
+    const setMenuIcon = (name) => {
+        mobileMenuButton.innerHTML = `<i data-lucide="${name}"></i>`;
+        if (window.lucide) lucide.createIcons();
+    };
+
     mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('open');
-        // Toggle hamburger icon
-        const icon = mobileMenuButton.textContent.trim();
-        mobileMenuButton.textContent = icon === '☰' ? '✕' : '☰';
+        const isOpen = mobileMenu.classList.toggle('open');
+        setMenuIcon(isOpen ? 'x' : 'menu');
     });
 
     // Close mobile menu when a link is clicked
     mobileMenu.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.remove('open');
-            mobileMenuButton.textContent = '☰';
+            setMenuIcon('menu');
         });
     });
 }
@@ -36,3 +39,8 @@ const observer = new IntersectionObserver((entries) => {
 fadeTargets.forEach(target => {
     observer.observe(target);
 });
+
+// Render Lucide icons (replaces [data-lucide] placeholders with inline SVGs)
+if (window.lucide) {
+    lucide.createIcons();
+}

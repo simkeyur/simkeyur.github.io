@@ -181,9 +181,15 @@ ul {
     background: none;
     border: none;
     color: var(--ink);
-    font-size: 1.5rem;
     cursor: pointer;
     padding: 4px;
+    line-height: 0;
+}
+
+.mobile-menu-btn svg {
+    width: 26px;
+    height: 26px;
+    stroke-width: 2;
 }
 
 .mobile-menu {
@@ -572,6 +578,9 @@ ul {
 }
 
 .skill-category h3 {
+    display: flex;
+    align-items: center;
+    gap: 9px;
     font-size: 0.95rem;
     font-weight: 700;
     color: var(--ink);
@@ -580,6 +589,14 @@ ul {
     margin-bottom: 8px;
     padding-bottom: 4px;
     border-bottom: 2px solid var(--accent);
+}
+
+.skill-category h3 svg {
+    width: 18px;
+    height: 18px;
+    color: var(--accent);
+    stroke-width: 2;
+    flex-shrink: 0;
 }
 
 .skill-category ul {
@@ -622,8 +639,13 @@ ul {
     gap: 8px;
 }
 
-.awards-list .icon {
-    font-size: 1rem;
+.awards-list .icon,
+.awards-list li svg {
+    width: 18px;
+    height: 18px;
+    color: var(--accent);
+    stroke-width: 2;
+    flex-shrink: 0;
 }
 
 .interests-text {

@@ -635,8 +635,9 @@ ul {
     font-size: 0.9rem;
     color: var(--ink-soft);
     display: flex;
-    align-items: center;
-    gap: 8px;
+    align-items: flex-start;
+    gap: 9px;
+    line-height: 1.5;
 }
 
 .awards-list .icon,
@@ -646,6 +647,7 @@ ul {
     color: var(--accent);
     stroke-width: 2;
     flex-shrink: 0;
+    margin-top: 2px;
 }
 
 .interests-text {
